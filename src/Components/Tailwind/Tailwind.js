@@ -1,4 +1,5 @@
-export default function TailwindComp(){
+// Tailwind practice conmponent
+export default function TailwindComp() {
   return (
     <div className="bg-gray-200 p-4">
       <h1 className="font-bold text-center text-blue-500">Welcome</h1>
@@ -7,4 +8,4 @@ export default function TailwindComp(){
       </button>
     </div>
   );
-};
+}

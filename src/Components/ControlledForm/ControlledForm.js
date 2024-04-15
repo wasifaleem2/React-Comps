@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+// controlled form
+import React, { useState } from "react";
 
 const ControlledForm = () => {
   const [formData, setFormData] = useState({
-    username: '',
-    email: '',
-    password: '',
+    username: "",
+    email: "",
+    password: "",
   });
 
   const handleInputChange = (event) => {
@@ -13,35 +14,55 @@ const ControlledForm = () => {
       ...formData,
       [name]: value,
     });
-    console.log("formData field on change", formData)
+    console.log("formData field on change", formData);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
     // Handle form submission with formData
-    console.log('Form Data:', formData);
+    console.log("Form Data:", formData);
   };
 
   return (
     <form onSubmit={handleSubmit}>
       <label>
         Username:
-        <input type="text" name="username" value={formData.username} onChange={handleInputChange} />
+        <input
+          type="text"
+          name="username"
+          value={formData.username}
+          onChange={handleInputChange}
+        />
       </label>
       <br />
       <label>
         Email:
-        <input type="email" name="email" value={formData.email} onChange={handleInputChange} />
+        <input
+          type="email"
+          name="email"
+          value={formData.email}
+          onChange={handleInputChange}
+        />
       </label>
       <br />
       <label>
         Password:
-        <input type="password" name="password" value={formData.password} onChange={handleInputChange} />
+        <input
+          type="password"
+          name="password"
+          value={formData.password}
+          onChange={handleInputChange}
+        />
       </label>
       {/* the below label and input for checking purpose */}
       <label>
         New Prop:
-        <input type="text" name="prop" value={formData.prop} onChange={handleInputChange} />
+        <input
+          type="text"
+          name="prop"
+          value={formData.prop}
+          onChange={handleInputChange}
+        />
       </label>
       {/*  */}
       <br />
